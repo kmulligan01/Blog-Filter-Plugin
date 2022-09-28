@@ -14,7 +14,6 @@
     justify-content: space-evenly
 }
 
-
 .post-img {
     border-top-right-radius: 5px !important;
     border-top-left-radius: 5px !important;
@@ -116,6 +115,36 @@ input[type="checkbox"]:checked {
     font-weight: 400;
     padding: 5px 10px;
     margin-right: 10px;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+}
+
+.page-numbers{
+    margin: 0 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #32324D;
+}
+
+.current{
+    box-shadow: 0px 1px 4px rgba(26, 26, 67, 0.1);
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.next{
+    color: #666687;
+    font-size: 25px;
+}
+
+.prev{
+    color: #666687;
+    font-size: 25px;
 }
 
 

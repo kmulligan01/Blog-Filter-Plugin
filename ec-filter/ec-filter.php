@@ -191,8 +191,8 @@ function ajax_pager( $ajaxposts, $page ) {
 		'total'     => $ajaxposts->max_num_pages,
 		'format'    => '#page=%#%',
 		'current'   => max( 1,  $page),
-		'prev_text' => 'Prev',
-		'next_text' => 'Next'
+		'prev_text' => '&lsaquo;',
+		'next_text' => '&rsaquo;'
 	]);
 
 	if ($ajaxposts->max_num_pages > 1) : ?>
