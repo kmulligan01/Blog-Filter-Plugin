@@ -1,7 +1,6 @@
 # Blog Filter Plugin
 
-Use this plugin to activate a category list of checklists that will run an ajax call when clicked
-on posts for filtering in Wordpress. It will filter custom post types as well as base categories
+Use this plugin to activate a category list of checklists that will run an ajax call when clicked on posts for filtering in Wordpress. It will filter custom post types as well as base categories. This is just a base plugin, and the styles will need to be swapped out per solution. The styles are basic CSS.
 
 ## Usage
 
