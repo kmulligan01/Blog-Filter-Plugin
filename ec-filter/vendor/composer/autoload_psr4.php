@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
     'Carbon_Fields\\' => array($vendorDir . '/htmlburger/carbon-fields/core'),
+    'Carbon_Field_Number\\' => array($vendorDir . '/htmlburger/carbon-field-number/core'),
     'Carbon_Field_Icon\\' => array($vendorDir . '/htmlburger/carbon-field-icon/core'),
 );

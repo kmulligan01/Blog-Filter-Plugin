@@ -46,25 +46,32 @@ function get_ajax_posts() {
 	   while ( $ajaxposts->have_posts() ) {
 		   $ajaxposts->the_post();
 	?>
-		  <article class="card-item">			
+		
+		  <article class="card-item">	
+		  <a href="<?php the_permalink(); ?>" class="card-link">
 				  <?php if ( has_post_thumbnail() ) : 
 					$url = wp_get_attachment_url( get_post_thumbnail_id($ajaxpost->ID) ); ?>
 					<div class="post-img" style="background: url('<?php echo $url?>') no-repeat;" ></div>
-				  <?php endif;?>		
+				  <?php endif;?>	
+				
 			  <div class="card-body">
-			  <a href="<?php the_permalink(); ?>" class="black">
+			  
 				  <header class="bf-header" >
 					  <h2 class="entry-title"><?php the_title(); ?></h2>
 				  </header>
 				  <div class="entry-summary">
 					  <?php the_excerpt(); ?>
 				  </div>
-				  </a>
+				  
+				  
 				  <div class="meta ">				 
 					<?php meta_btn($ajaxposts, $terms);?>	
 				  </div>
-			  </div>						
-		  </article>       	 		
+				  
+			  </div>	
+			  </a>						
+		  </article>      
+		 	
 	<?php 
 	   }
 		//Pagination
@@ -135,6 +142,8 @@ function ajax_pager( $ajaxposts, $page ) {
 
 	if (!$ajaxposts)
 		return;	
+	$next_icon = carbon_get_theme_option( 'next_icon' );
+	$prev_icon = carbon_get_theme_option( 'back_icon'  );
 
 	$paginate = paginate_links([
 		'base'      => '%_%',
@@ -142,8 +151,8 @@ function ajax_pager( $ajaxposts, $page ) {
 		'total'     => $ajaxposts->max_num_pages,
 		'format'    => '#page=%#%',
 		'current'   => max( 1,  $page),
-		'prev_text' => '&lsaquo;',
-		'next_text' => '&rsaquo;'
+		'prev_text' => '<i class="fa-solid fa-'. $prev_icon['value'].'"></i>',
+		'next_text' => '<i class="fa-solid fa-'. $next_icon['value'] . '"></i>'
 	]);
 
 	if ($ajaxposts->max_num_pages > 1) : ?>

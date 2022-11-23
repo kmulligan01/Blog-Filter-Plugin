@@ -8,6 +8,7 @@ class ComposerStaticInitd1038cefb049cd6e5054ebcbebfa81c6
 {
     public static $files = array (
         '1db9a602f20508d50525f9dad168786f' => __DIR__ . '/..' . '/htmlburger/carbon-field-icon/core/bootstrap.php',
+        '6632f90381dd49c5fe745d09406b9abb' => __DIR__ . '/..' . '/htmlburger/carbon-field-number/field.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -15,6 +16,7 @@ class ComposerStaticInitd1038cefb049cd6e5054ebcbebfa81c6
         array (
             'Composer\\Installers\\' => 20,
             'Carbon_Fields\\' => 14,
+            'Carbon_Field_Number\\' => 20,
             'Carbon_Field_Icon\\' => 18,
         ),
     );
@@ -27,6 +29,10 @@ class ComposerStaticInitd1038cefb049cd6e5054ebcbebfa81c6
         'Carbon_Fields\\' => 
         array (
             0 => __DIR__ . '/..' . '/htmlburger/carbon-fields/core',
+        ),
+        'Carbon_Field_Number\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/htmlburger/carbon-field-number/core',
         ),
         'Carbon_Field_Icon\\' => 
         array (

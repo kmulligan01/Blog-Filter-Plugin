@@ -62,21 +62,25 @@ function my_default_posts($atts) {
 	<?php
    if ($qry_posts->have_posts() ) {
 	   while ( $qry_posts->have_posts() ) {
-        $qry_posts->the_post();?>	  	             	
+        $qry_posts->the_post();?>
+		 	             	
 		  <article class="card-item">
+		  <a href="<?php the_permalink(); ?>" class="black">	 
                 <?php if ( has_post_thumbnail() ) : 
 					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 					<div class="post-img" style="background: url('<?php echo $url?>') no-repeat;" ></div>
 				  <?php endif;?>
+				
 			  <div class="card-body">
-			  <a href="<?php the_permalink(); ?>" class="black">
+			
 				  <header  class="bf-header">
 					  <h2 class="entry-title"><?php the_title(); ?></h2>
 				  </header>
 				  <div class="entry-summary">
 					  <?php the_excerpt(); ?>
 				  </div>
-				  </a>
+				  
+				  
 				  <div class="meta ">		
 				  	<?php 
 					if($tax_type_1 != '' || $tax_type_2 != ''){
@@ -85,8 +89,11 @@ function my_default_posts($atts) {
 				
 					?>
 				  </div>					  
-			  </div>						
+				
+			  </div>		
+			  </a>				
 		  </article>
+				
     <?php 
 		}
         

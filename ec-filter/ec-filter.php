@@ -3,7 +3,7 @@
  * Plugin Name: Blog Filter Widget
  * Description: Custom Blog Filter widget to use on resource center pages
  * Plugin URI:  https://www.evercommerce.com/
- * Version:     1.0.5
+ * Version:     1.0.6
  * Author:      EverCommerce GD Dev Team
  * Author URI:  https://www.evercommerce.com/
  * Text Domain: ecfilter
@@ -19,7 +19,7 @@ define('ECFILTER_URL', plugin_dir_url(__FILE__) );
 //get styles and scripts for frontend and admin page
 include(plugin_dir_path(__FILE__) . 'includes/ecfilter-styles-scripts.php');
 
-//create options page with instructions
+//create options page with settings
 include( plugin_dir_path(__FILE__) . 'admin/admin-setup.php' );
 
 //register all files
@@ -45,7 +45,7 @@ add_action( 'after_setup_theme', 'carbon_fields_boot_plugin' );
 
 //Settings link after activation
 function ecfilter_add_settings_link($links){
-	$settings_link = '<a href="options-general.php?page=ecfilter-settings">'. __('Settings') . '</a>';
+	$settings_link = '<a href="options-general.php?page=crb_carbon_fields_container_blog_filter_settings.php">'. __('Settings') . '</a>';
 
 	array_push( $links, $settings_link );
 	return $links;

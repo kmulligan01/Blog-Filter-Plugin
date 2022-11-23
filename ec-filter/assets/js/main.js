@@ -9,6 +9,8 @@
     $newContent = $('#demo');
     $page = 1;
 
+    $checkboxes = $('.blog-filter input');
+
 
   toggle_check()
 
@@ -20,8 +22,6 @@
     itemSelector: '.default-grid'
   });
 
-  $checkboxes = $('.blog-filter input');
-
   $checkboxes.on('click', function() {
      
     $inclusives = [];
@@ -29,7 +29,7 @@
     $checkboxes.each( function( i, elem ) {       
       if ( elem.checked && elem.value != 'all') {
         $replace = elem.value.replace(/[\s][^\w][\s]/g, '-and-');
-        $inclusives.push($replace.toLowerCase());         
+        $inclusives.push($replace.toLowerCase());
       }         
     });
 
@@ -38,7 +38,7 @@
     if($inclusives.length){
       
       $params = $inclusives.join(', ');
-      console.log($params)
+      
     
       $allText.prop('checked', false);
    

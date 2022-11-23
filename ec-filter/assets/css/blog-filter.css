@@ -5,7 +5,7 @@
 .default-grid{
     display: flex;
    flex-wrap: wrap;
-   justify-content: space-evenly;
+   justify-content: space-evenly; 
 }
 
 #demo{
@@ -14,55 +14,7 @@
     justify-content: space-evenly
 }
 
-.nav-filter-title{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 16px;
-    color: #32324D;
-}
-
-.post-img {
-    border-top-right-radius: 5px !important;
-    border-top-left-radius: 5px !important;
-    height: 220px !important;
-    width: 100%;
-    background-position: center !important;
-    background-size: cover !important;
-}
-
-.card-item{
-    width: 32%;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
-
-.card-body{
-    padding: 20px 30px;
-}
-
-.bf-header h2{
-    font-weight: 400 !important;
-    font-size: 21px !important;
-    line-height: 25px;
-    color: #CE2B5F;
-    margin-bottom: 20px;
-}
-
-.entry-summary p{
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-}
-
-.meta{
-    margin-top: 50px;
-}
-
+/*cat checklist*/
 .blog-filter{
     display: flex;
     flex-direction: column;
@@ -87,8 +39,24 @@ input[type=checkbox]{
     height: 18px;
 }
 
-input[type="checkbox"]:checked {
-    background: #5058D2;
+/*card and card element styles*/
+.post-img {
+    border-top-right-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    height: 220px !important;
+    width: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.card-body{
+    padding: 20px 30px;
+}
+
+
+/*meta button styles*/
+.meta{
+    margin-top: 50px;
 }
 
 .m-active{
@@ -105,17 +73,6 @@ input[type="checkbox"]:checked {
     align-items: center;
 }
 
-.active{
-    background: #5058D2;
-    border-radius: 2px;
-    text-transform: capitalize;
-    padding: 5px 10px;
-    color: #fff;
-    margin-right: 10px;
-    font-weight: 400;
-    border: 0.5px solid #5058D2;
-}
-
 .inactive{
     background: #F5F5F5;
     border: 0.5px solid #DDD;
@@ -125,37 +82,12 @@ input[type="checkbox"]:checked {
     margin-right: 10px;
 }
 
+/*pagination*/
+
 .pagination{
     display: flex;
     align-items: center;
 }
-
-.page-numbers{
-    margin: 0 10px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #32324D;
-}
-
-.current{
-    box-shadow: 0px 1px 4px rgba(26, 26, 67, 0.1);
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    padding: 8px;
-}
-
-.next{
-    color: #666687;
-    font-size: 25px;
-}
-
-.prev{
-    color: #666687;
-    font-size: 25px;
-}
-
-
 
 
   @media (max-width: 480px) {
