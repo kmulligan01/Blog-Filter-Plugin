@@ -29,10 +29,28 @@ Container::make( 'theme_options', __( 'Blog Filter Settings' ) )
                 '0' => __('None'),
                 ) )
             ->set_width( 33 ),
-            Field::make( 'separator', 'checklist_separator', __( 'Filter Checklist Options' ) ),
-            Field::make( 'color', 'checklist_active_color', __( 'Checklist Active Color' ) )
+            Field::make( 'separator', 'checklist_separator', __( 'Filter Checklist Text Options' ) ),
+            Field::make( 'color', 'checklist_active_color', __( 'Checkbox Active Color' ) )
                 ->set_alpha_enabled( true )
                 ->set_help_text('When checkbox is checked, what color is selected')
+                ->set_width( 25 ),
+            Field::make( 'number', 'checklist_label_fs', __( 'Label Font Size' ) )
+                ->set_default_value(14)
+                ->set_min(12)
+                ->set_max(20)
+                ->set_help_text( 'Set title font size - font size range is 12px to 20px' )
+                ->set_width( 25 ),
+            Field::make( 'color', 'checklist_label_color', __( 'Label Text Color' ) )
+                ->set_alpha_enabled( true )
+                ->set_width( 25 ),
+            Field::make( 'radio', 'checklist_label_weight', __( 'Label Font Weight' ) )
+                ->set_options( array( 
+                    '400' => __('Lightly Bold'), 
+                    '600' => __('Bold'),
+                    '700' => __('Heavy Bold'),
+                    '0' => __('None'),
+                    ) )
+                ->set_width( 25 ),
        
     ) )
     ->add_tab( __( 'Card Style Options' ), array(
@@ -171,7 +189,12 @@ function carbon_styles() {
 	$checklist_title_color = carbon_get_theme_option( 'nav_title_color' );
 	$checklist_title_fs = carbon_get_theme_option( 'title_font_size' );
 	$checklist_title_weight = carbon_get_theme_option( 'title_font_weight' );
+
 	$checkbox_active = carbon_get_theme_option( 'checklist_active_color' );
+
+    $label_color = carbon_get_theme_option( 'checklist_label_color' );
+	$label_fs = carbon_get_theme_option( 'checklist_label_fs' );
+	$label_weight = carbon_get_theme_option( 'checklist_label_weight' );
 
 	$card_bg = carbon_get_theme_option( 'card_background' );
 
@@ -211,8 +234,18 @@ function carbon_styles() {
 				font-size: ' . $checklist_title_fs .'px;
 				line-height: 16px;
 				color: ' . $checklist_title_color .';
-			} 
-			
+			} 			
+            
+            .bf-label{
+                margin: 5px 0;
+                font-weight: ' . $label_weight .';
+                font-size: ' . $label_fs .'px;
+                line-height: 16px;
+                color: ' . $label_color .';;
+                vertical-align: middle;
+                justify-content: center;
+            }
+
 			input[type="checkbox"]:checked {
 				background: ' . $checkbox_active .';
 			}
@@ -251,6 +284,10 @@ function carbon_styles() {
                 font-weight: '. $meta_weight .';
                 font-size: ' .$meta_fs .'px !important;
                 border: 0.5px solid ' . $active_border_color .';
+            }
+
+            .inactive{
+                font-size: ' .$meta_fs .'px !important;
             }
 
             .page-numbers{

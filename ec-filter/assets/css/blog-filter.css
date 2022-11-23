@@ -22,16 +22,6 @@
     justify-content: center;
 }
 
-.bf-label{
-    margin: 5px 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 16px;
-    color: #32324D;
-    vertical-align: middle;
-    justify-content: center;
-}
-
 input[type=checkbox]{
     border: 1px solid #C0C0CF;
     border-radius: 4px;
