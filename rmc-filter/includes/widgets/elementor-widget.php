@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-class EC_Cat_List_Widget extends \Elementor\Widget_Base {
+class RMC_Cat_List_Widget extends \Elementor\Widget_Base {
 
 	public function __construct( $data = [], $args = null ) {
 		parent::__construct( $data, $args );

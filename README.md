@@ -74,4 +74,3 @@ terms_2: blog, sales
 ## Authors
 
 - Kendra Mulligan
-- Evercommerce Web Dev Team
